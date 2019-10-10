@@ -20,15 +20,16 @@ public class Employee {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column
 	private int id;
 	@Column
-	private String name;
+	private String emp_name;
 	@Column
 	private String designation;
 	@Column
 	private String expertise;
 	@Column
-	@Temporal(TemporalType.TIMESTAMP)
+//	@Temporal(TemporalType.TIMESTAMP)
 	@LastModifiedDate
 	private Date createdAt;
 
@@ -40,12 +41,12 @@ public class Employee {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getEmp_name() {
+		return emp_name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setEmp_name(String emp_name) {
+		this.emp_name = emp_name;
 	}
 
 	public String getDesignation() {
@@ -69,6 +70,8 @@ public class Employee {
 	}
 
 	public void setCreatedAt(Date createdAt) {
+//		Date d=new Date("2019-09-01T18:30:00.000+0000");
+//		System.out.println("----->"+createdAt);
 		this.createdAt = createdAt;
 	}
 

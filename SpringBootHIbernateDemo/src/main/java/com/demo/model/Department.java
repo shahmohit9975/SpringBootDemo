@@ -22,7 +22,6 @@ public class Department {
 	private String name;
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "department_id")
-	@OrderColumn(name = "type")
 	private List<Employee> employees;
 
 	public int getDepartment_id() {
